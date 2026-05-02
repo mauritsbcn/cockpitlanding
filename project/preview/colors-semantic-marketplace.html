@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Semantic & marketplace colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .group { margin-bottom: 16px; }
+  .group-label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; margin-bottom: 8px; font-weight: 600; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .swatch { border-radius: 10px; height: 56px; display:flex; flex-direction:column; justify-content:flex-end; padding: 8px 10px; border: 1px solid var(--cp-border); }
+  .swatch .name { font-size: 10px; font-weight: 600; color: #fff; }
+  .swatch .hex  { font-size: 9px; font-family: var(--cp-font-mono); color: rgba(255,255,255,.85); }
+</style>
+</head>
+<body>
+  <div class="group">
+    <div class="group-label">Semantic</div>
+    <div class="row" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="swatch" style="background:#16A34A"><span class="name">success</span><span class="hex">#16A34A</span></div>
+      <div class="swatch" style="background:#D97706"><span class="name">warning</span><span class="hex">#D97706</span></div>
+      <div class="swatch" style="background:#DC2626"><span class="name">error</span><span class="hex">#DC2626</span></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="group-label">Marketplace brands</div>
+    <div class="row">
+      <div class="swatch" style="background:#0066B2"><span class="name">Bol.com</span><span class="hex">#0066B2</span></div>
+      <div class="swatch" style="background:#FF9900"><span class="name">Amazon</span><span class="hex">#FF9900</span></div>
+      <div class="swatch" style="background:#00843D"><span class="name">Praxis</span><span class="hex">#00843D</span></div>
+      <div class="swatch" style="background:#E30613"><span class="name">Brico</span><span class="hex">#E30613</span></div>
+      <div class="swatch" style="background:#5A8E3A"><span class="name">Shopify</span><span class="hex">#5A8E3A</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Neutrals & text</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 12px; }
+  .swatch {
+    border-radius: 10px; height: 76px; display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 10px 12px; border: 1px solid var(--cp-border);
+  }
+  .swatch .name { font-size: 11px; font-weight: 600; }
+  .swatch .hex  { font-size: 10px; font-family: var(--cp-font-mono); opacity: .8; }
+  .light .name { color: #0B2545; } .light .hex { color: #4A5568; }
+  .dark  .name, .dark .hex { color: #fff; }
+  .text-row { display: flex; gap: 24px; align-items: baseline; padding: 8px 4px; border-top: 1px solid var(--cp-border); }
+  .text-row span { font-size: 10px; font-family: var(--cp-font-mono); color: #718096; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="swatch light" style="background:#FFFFFF"><span class="name">bg</span><span class="hex">#FFFFFF</span></div>
+    <div class="swatch light" style="background:#F7F9FC"><span class="name">surface</span><span class="hex">#F7F9FC</span></div>
+    <div class="swatch light" style="background:#EDF2F7"><span class="name">surface-2</span><span class="hex">#EDF2F7</span></div>
+    <div class="swatch light" style="background:#E5EAF0"><span class="name">border</span><span class="hex">#E5EAF0</span></div>
+    <div class="swatch light" style="background:#F0F4F8"><span class="name">border-soft</span><span class="hex">#F0F4F8</span></div>
+  </div>
+  <div class="text-row" style="color:#0B2545"><strong>Aa Primary text</strong> <span>#0B2545 · text</span></div>
+  <div class="text-row" style="color:#4A5568"><strong>Aa Secondary</strong> <span>#4A5568 · text-secondary</span></div>
+  <div class="text-row" style="color:#718096"><strong>Aa Muted</strong> <span>#718096 · text-muted</span></div>
+  <div class="text-row" style="color:#A0AEC0"><strong>Aa Faint</strong> <span>#A0AEC0 · text-faint</span></div>
+</body>
+</html>

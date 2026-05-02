@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Marketplace badges</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; display: flex; flex-direction: column; gap: 14px; }
+  .group-label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 600; margin-bottom: 6px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge { font-size: 10px; font-weight: 600; padding: 3px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .chip { font-size: 12px; font-weight: 500; padding: 6px 12px; border-radius: 9999px; cursor: pointer; }
+  .chip-off { background: #fff; color: #4A5568; border: 1px solid #E5EAF0; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="group-label">Tinted badges (used in tables/orders)</div>
+    <div class="row">
+      <span class="badge" style="background:#0066B220;color:#0066B2">Bol.com</span>
+      <span class="badge" style="background:#FF990020;color:#FF9900">Amazon NL</span>
+      <span class="badge" style="background:#FF990020;color:#FF9900">Amazon BE</span>
+      <span class="badge" style="background:#00843D20;color:#00843D">Praxis</span>
+      <span class="badge" style="background:#E3061320;color:#E30613">Brico</span>
+      <span class="badge" style="background:#5A8E3A20;color:#5A8E3A">Shopify</span>
+    </div>
+  </div>
+  <div>
+    <div class="group-label">Filter chips (selected = solid brand color)</div>
+    <div class="row">
+      <span class="chip" style="background:#0B2545;color:#fff">Alle</span>
+      <span class="chip" style="background:#0066B2;color:#fff">Bol.com</span>
+      <span class="chip chip-off">Amazon NL</span>
+      <span class="chip chip-off">Praxis</span>
+      <span class="chip chip-off">Shopify</span>
+    </div>
+  </div>
+</body>
+</html>

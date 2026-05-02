@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Sidebar nav</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 0; background: #F7F9FC; }
+  .frame { display: flex; height: 380px; }
+  aside { width: 240px; background: #0B2545; color: #fff; padding: 24px; display: flex; flex-direction: column; }
+  .brand { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+  .tag { font-size: 11px; color: rgba(255,255,255,.6); margin-top: 2px; }
+  nav { margin-top: 28px; display: flex; flex-direction: column; gap: 2px; flex: 1; }
+  a { display: block; padding: 8px 12px; font-size: 13px; border-radius: 8px; color: rgba(255,255,255,.8); text-decoration: none; }
+  a:hover { background: rgba(255,255,255,.1); color: #fff; }
+  a.active { background: rgba(255,255,255,.10); color: #fff; }
+  .foot { padding-top: 16px; border-top: 1px solid rgba(255,255,255,.10); font-size: 11px; color: rgba(255,255,255,.6); }
+  main { flex: 1; padding: 28px; }
+  h2 { margin: 0; font-size: 20px; color: #0B2545; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <aside>
+      <div class="brand">Cockpit</div>
+      <div class="tag">Marketplace dashboard</div>
+      <nav>
+        <a class="active">Overzicht</a>
+        <a>Bestellingen</a>
+        <a>Producten</a>
+        <a>Financieel</a>
+        <a>Connecties</a>
+      </nav>
+      <div class="foot">Uitloggen</div>
+    </aside>
+    <main>
+      <h2>Overzicht</h2>
+    </main>
+  </div>
+</body>
+</html>

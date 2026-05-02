@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Radii</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; display: flex; gap: 16px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { background: #0B2545; width: 70px; height: 70px; }
+  .label { font-size: 10px; font-family: var(--cp-font-mono); color: #4A5568; }
+  .px { font-size: 9px; font-family: var(--cp-font-mono); color: #A0AEC0; }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:4px"></div><span class="label">xs</span><span class="px">4px</span><span class="px">badge</span></div>
+  <div class="item"><div class="box" style="border-radius:6px"></div><span class="label">sm</span><span class="px">6px</span><span class="px">input/btn</span></div>
+  <div class="item"><div class="box" style="border-radius:8px"></div><span class="label">md</span><span class="px">8px</span><span class="px">small card</span></div>
+  <div class="item"><div class="box" style="border-radius:12px"></div><span class="label">lg</span><span class="px">12px</span><span class="px">card</span></div>
+  <div class="item"><div class="box" style="border-radius:16px"></div><span class="label">xl</span><span class="px">16px</span><span class="px">modal</span></div>
+  <div class="item"><div class="box" style="border-radius:9999px;width:90px"></div><span class="label">pill</span><span class="px">9999</span><span class="px">filter chip</span></div>
+</body>
+</html>

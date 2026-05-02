@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Shadows & elevation</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px 24px; background: #F7F9FC; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .box { background: #fff; border: 1px solid #E5EAF0; border-radius: 12px; width: 160px; height: 90px; }
+  .label { font-size: 11px; font-family: var(--cp-font-mono); color: #4A5568; font-weight: 600; }
+  .desc  { font-size: 10px; color: #718096; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="item">
+    <div class="box" style="box-shadow:0 1px 2px rgba(11,37,69,.04)"></div>
+    <span class="label">shadow-card</span>
+    <span class="desc">default card · barely there</span>
+  </div>
+  <div class="item">
+    <div class="box" style="box-shadow:0 8px 24px rgba(11,37,69,.08)"></div>
+    <span class="label">shadow-elevated</span>
+    <span class="desc">dropdown · login card</span>
+  </div>
+  <div class="item">
+    <div class="box" style="box-shadow:0 24px 60px rgba(11,37,69,.18)"></div>
+    <span class="label">shadow-modal</span>
+    <span class="desc">modal · over backdrop</span>
+  </div>
+</body>
+</html>

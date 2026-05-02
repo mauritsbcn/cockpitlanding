@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Cockpit huisstijl: donkerblauw + wit */
+  --color-navy-900: #0B2545;        /* primary deep navy */
+  --color-navy-700: #13315C;        /* navy mid */
+  --color-navy-500: #1B3E6F;        /* navy lighter (Sendcloud-blauw) */
+  --color-blue-500: #3A8FE0;        /* accent blauw voor CTAs */
+  --color-blue-50: #EFF6FF;         /* lichtblauwe achtergrond */
+
+  --color-bg: #FFFFFF;
+  --color-surface: #F7F9FC;         /* subtle gray voor cards/page bg */
+  --color-surface-2: #EDF2F7;
+  --color-border: #E5EAF0;
+
+  --color-text: #0B2545;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #718096;
+
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* Utility classes voor consistente styling */
+.btn-primary {
+  background: var(--color-navy-900);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 150ms;
+}
+.btn-primary:hover {
+  background: var(--color-navy-700);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-navy-900);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 150ms;
+}
+.btn-secondary:hover {
+  background: var(--color-surface);
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: white;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-navy-500);
+  box-shadow: 0 0 0 3px rgba(27, 62, 111, 0.1);
+}

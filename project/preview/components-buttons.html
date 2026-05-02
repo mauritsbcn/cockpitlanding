@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 600; min-width: 90px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="label">Primary</span>
+    <button class="cp-btn-primary">Plan een intake</button>
+    <button class="cp-btn-primary">Verbind marketplace</button>
+    <button class="cp-btn-primary" disabled>Inloggen…</button>
+  </div>
+  <div class="row">
+    <span class="label">Secondary</span>
+    <button class="cp-btn-secondary">Vernieuwen</button>
+    <button class="cp-btn-secondary">Annuleren</button>
+  </div>
+  <div class="row">
+    <span class="label">Ghost</span>
+    <button class="cp-btn-ghost">Uitloggen</button>
+    <button class="cp-btn-ghost">Bekijk details</button>
+  </div>
+</body>
+</html>

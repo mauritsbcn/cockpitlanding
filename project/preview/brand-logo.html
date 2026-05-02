@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Logo</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .tile { border: 1px solid #E5EAF0; border-radius: 12px; height: 110px; display:flex; align-items: center; justify-content: center; }
+  .dark { background: #0B2545; border: 0; }
+  .grad { background: linear-gradient(135deg, #0B2545, #13315C 50%, #1B3E6F); border: 0; }
+  .label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 600; margin-top: 6px; }
+  img { display: block; height: 30px; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="tile"><img src="../assets/logo-wordmark.svg" alt="Cockpit"></div>
+    <div class="label">Wordmark · navy</div>
+  </div>
+  <div>
+    <div class="tile dark"><img src="../assets/logo-wordmark-white.svg" alt="Cockpit"></div>
+    <div class="label">Wordmark · white</div>
+  </div>
+  <div>
+    <div class="tile"><img src="../assets/logo-mark.svg" alt="Cockpit mark" style="height:48px"></div>
+    <div class="label">Mark · favicon / app icon</div>
+  </div>
+  <div>
+    <div class="tile grad"><img src="../assets/logo-wordmark-white.svg" alt="Cockpit" style="height:36px"></div>
+    <div class="label">On gradient (login surface)</div>
+  </div>
+</body>
+</html>

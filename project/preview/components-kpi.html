@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · KPI cards</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #F7F9FC; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; font-variant-numeric: tabular-nums; }
+  .card { background:#fff; border:1px solid #E5EAF0; border-radius:12px; padding:18px; box-shadow: 0 1px 2px rgba(11,37,69,.04); }
+  .head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px; }
+  .label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 500; }
+  .icon { color: #A0AEC0; }
+  .value { font-size: 24px; font-weight: 700; color: #0B2545; letter-spacing: -.01em; line-height: 1.1; }
+  .row { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 11px; }
+  .pos { color: #16A34A; font-weight: 500; }
+  .neg { color: #DC2626; font-weight: 500; }
+  .hint { color: #A0AEC0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head"><span class="label">Bruto omzet</span><span class="icon">€</span></div>
+    <div class="value">€124.580</div>
+    <div class="row"><span class="pos">↑ 12,4%</span><span class="hint">vs vorige periode</span></div>
+  </div>
+  <div class="card">
+    <div class="head"><span class="label">Netto resultaat</span><span class="icon">↗</span></div>
+    <div class="value">€22.680</div>
+    <div class="row"><span class="hint">marge 18,2%</span></div>
+  </div>
+  <div class="card">
+    <div class="head"><span class="label">TACoS</span></div>
+    <div class="value">8,3%</div>
+    <div class="row"><span class="neg">↑ 1,2%</span><span class="hint">ads / omzet</span></div>
+  </div>
+</body>
+</html>

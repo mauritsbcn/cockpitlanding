@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #F7F9FC; font-variant-numeric: tabular-nums; }
+  .card { background:#fff; border:1px solid #E5EAF0; border-radius:12px; padding:20px; box-shadow: 0 1px 2px rgba(11,37,69,.04); }
+  .h3 { font-size: 14px; font-weight: 600; color: #0B2545; margin: 0 0 14px; }
+  .row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #F0F4F8; font-size: 13px; }
+  .row:last-child { border-bottom: 0; }
+  .left { display:flex; align-items:center; gap: 10px; }
+  .rank { font-size: 11px; font-weight: 700; color: #A0AEC0; width: 18px; }
+  .sku { font-weight: 500; color: #0B2545; }
+  .name { font-size: 11px; color: #718096; }
+  .right { text-align: right; }
+  .right .v { font-weight: 500; color: #0B2545; }
+  .right .u { font-size: 11px; color: #718096; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h3 class="h3">Top 5 producten</h3>
+    <div class="row">
+      <div class="left"><span class="rank">1</span><div><div class="sku">PRX-4421-WHT</div><div class="name">Praxis bench drill 16-speed</div></div></div>
+      <div class="right"><div class="v">€18.420</div><div class="u">312 stuks</div></div>
+    </div>
+    <div class="row">
+      <div class="left"><span class="rank">2</span><div><div class="sku">BOL-9911-BLK</div><div class="name">USB-C dock 8-in-1</div></div></div>
+      <div class="right"><div class="v">€12.180</div><div class="u">228 stuks</div></div>
+    </div>
+    <div class="row">
+      <div class="left"><span class="rank">3</span><div><div class="sku">SHO-1107-RED</div><div class="name">Tuinslang 25m premium</div></div></div>
+      <div class="right"><div class="v">€8.940</div><div class="u">186 stuks</div></div>
+    </div>
+  </div>
+</body>
+</html>

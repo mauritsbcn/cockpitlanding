@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  label { font-size: 11px; font-weight: 500; color: #0B2545; display: block; margin-bottom: 4px; }
+  .field { display: flex; flex-direction: column; }
+  .help { font-size: 11px; color: #718096; margin-top: 4px; }
+  select.cp-input { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M3 5l3 3 3-3' stroke='%23718096' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 28px; }
+</style>
+</head>
+<body>
+  <div class="field">
+    <label>Email</label>
+    <input class="cp-input" type="email" placeholder="jij@bedrijf.nl">
+  </div>
+  <div class="field">
+    <label>Wachtwoord</label>
+    <input class="cp-input" type="password" placeholder="••••••••">
+  </div>
+  <div class="field">
+    <label>Periode</label>
+    <select class="cp-input">
+      <option>Deze maand</option>
+      <option>Dit kwartaal</option>
+      <option>Dit jaar</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>API key</label>
+    <input class="cp-input" value="bol_••••••••••••3f9a" readonly style="font-family:var(--cp-font-mono);font-size:12px">
+    <div class="help">AES-256 encrypted in DB</div>
+  </div>
+</body>
+</html>

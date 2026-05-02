@@ -1,0 +1,268 @@
+/* =====================================================================
+   Cockpit Design System — Tokens
+   donkerblauw + wit · Inter · clean, generous spacing, dense data
+   ===================================================================== */
+
+/* ---- 1. Webfont -------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---- 2. Color: brand & navy family --------------------------- */
+  --cp-navy-900: #0B2545;   /* primary brand — sidebar, primary btn, body text */
+  --cp-navy-700: #13315C;   /* primary hover, gradient mid-stop */
+  --cp-navy-500: #1B3E6F;   /* tertiary navy, focus base, chart primary */
+  --cp-blue-500: #3A8FE0;   /* accent blue — demo mode, ad highlight */
+  --cp-blue-50:  #EFF6FF;   /* tinted info bg */
+
+  /* ---- 3. Color: neutrals & surfaces --------------------------- */
+  --cp-bg:         #FFFFFF;  /* card surface */
+  --cp-surface:    #F7F9FC;  /* page background — cool gray-blue */
+  --cp-surface-2:  #EDF2F7;  /* hover row, subtle band */
+  --cp-border:     #E5EAF0;  /* hairlines, 1px */
+  --cp-border-soft:#F0F4F8;  /* table-row separator (one tone lighter) */
+
+  /* ---- 4. Color: text scale ------------------------------------ */
+  --cp-text:           #0B2545;  /* primary */
+  --cp-text-secondary: #4A5568;  /* table cells, body */
+  --cp-text-muted:     #718096;  /* hints, captions */
+  --cp-text-faint:     #A0AEC0;  /* disabled, placeholder, em-dash */
+  --cp-text-on-navy:   #FFFFFF;
+  --cp-text-on-navy-soft: rgba(255, 255, 255, 0.60);
+
+  /* ---- 5. Color: semantic -------------------------------------- */
+  --cp-success: #16A34A;
+  --cp-warning: #D97706;
+  --cp-error:   #DC2626;
+
+  /* ---- 6. Color: marketplace brand colors --------------------- */
+  --cp-mp-bolcom:   #0066B2;
+  --cp-mp-amazon:   #FF9900;
+  --cp-mp-praxis:   #00843D;
+  --cp-mp-brico:    #E30613;
+  --cp-mp-shopify:  #5A8E3A;
+
+  /* ---- 7. Type: family ---------------------------------------- */
+  --cp-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --cp-font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* ---- 8. Type: scale (lh = line-height) ---------------------- */
+  --cp-text-xs:    11px;     --cp-lh-xs:    16px;   /* table headers, KPI labels (uppercase) */
+  --cp-text-sm:    13px;     --cp-lh-sm:    18px;   /* secondary copy, hints */
+  --cp-text-base:  14px;     --cp-lh-base:  20px;   /* body / table body */
+  --cp-text-md:    15px;     --cp-lh-md:    22px;   /* nav items */
+  --cp-text-lg:    16px;     --cp-lh-lg:    24px;   /* section heads on light */
+  --cp-text-xl:    20px;     --cp-lh-xl:    28px;   /* card heads, login subtitle */
+  --cp-text-2xl:   24px;     --cp-lh-2xl:   32px;   /* page titles */
+  --cp-text-3xl:   30px;     --cp-lh-3xl:   36px;   /* login page wordmark, marketing h2 */
+  --cp-text-4xl:   40px;     --cp-lh-4xl:   48px;   /* marketing h1 small */
+  --cp-text-5xl:   56px;     --cp-lh-5xl:   60px;   /* marketing h1 hero */
+  --cp-text-6xl:   72px;     --cp-lh-6xl:   76px;   /* hero numerics */
+
+  /* ---- 9. Type: weight ---------------------------------------- */
+  --cp-fw-regular:  400;
+  --cp-fw-medium:   500;
+  --cp-fw-semibold: 600;
+  --cp-fw-bold:     700;
+
+  /* ---- 10. Spacing (4px base) --------------------------------- */
+  --cp-space-1:  4px;
+  --cp-space-2:  8px;
+  --cp-space-3:  12px;
+  --cp-space-4:  16px;
+  --cp-space-5:  20px;
+  --cp-space-6:  24px;
+  --cp-space-8:  32px;
+  --cp-space-10: 40px;
+  --cp-space-12: 48px;
+  --cp-space-16: 64px;
+
+  /* ---- 11. Radii ---------------------------------------------- */
+  --cp-radius-xs:    4px;   /* badge, chip */
+  --cp-radius-sm:    6px;   /* input, button */
+  --cp-radius-md:    8px;   /* small card */
+  --cp-radius-lg:   12px;   /* card */
+  --cp-radius-xl:   16px;   /* modal, login card */
+  --cp-radius-pill: 9999px; /* marketplace filter chip */
+
+  /* ---- 12. Shadow --------------------------------------------- */
+  --cp-shadow-card:     0 1px 2px rgba(11, 37, 69, 0.04);
+  --cp-shadow-elevated: 0 8px 24px rgba(11, 37, 69, 0.08);
+  --cp-shadow-modal:    0 24px 60px rgba(11, 37, 69, 0.18);
+  --cp-shadow-focus:    0 0 0 3px rgba(27, 62, 111, 0.10);
+
+  /* ---- 13. Borders -------------------------------------------- */
+  --cp-border-width: 1px;
+
+  /* ---- 14. Motion --------------------------------------------- */
+  --cp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --cp-duration-fast:   100ms;
+  --cp-duration-base:   150ms;
+  --cp-duration-slow:   200ms;
+
+  /* ---- 15. Layout --------------------------------------------- */
+  --cp-sidebar-width: 240px;
+  --cp-content-max:   1600px;
+
+  /* ---- 16. Brand gradient (login surface only) --------------- */
+  --cp-gradient-navy: linear-gradient(135deg, #0B2545 0%, #13315C 50%, #1B3E6F 100%);
+}
+
+/* =====================================================================
+   Semantic, opinionated styles
+   ===================================================================== */
+
+html, body {
+  font-family: var(--cp-font-sans);
+  color: var(--cp-text);
+  background: var(--cp-surface);
+  font-size: var(--cp-text-base);
+  line-height: var(--cp-lh-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* numerals must align in tables */
+.cp-num,
+table td,
+.cp-kpi-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Type semantic classes -------------------------------- */
+.cp-h1 {
+  font-size: var(--cp-text-2xl);
+  line-height: var(--cp-lh-2xl);
+  font-weight: var(--cp-fw-bold);
+  color: var(--cp-text);
+  letter-spacing: -0.01em;
+}
+.cp-h2 {
+  font-size: var(--cp-text-xl);
+  line-height: var(--cp-lh-xl);
+  font-weight: var(--cp-fw-semibold);
+  color: var(--cp-text);
+  letter-spacing: -0.005em;
+}
+.cp-h3 {
+  font-size: var(--cp-text-base);
+  line-height: var(--cp-lh-base);
+  font-weight: var(--cp-fw-semibold);
+  color: var(--cp-text);
+}
+.cp-body {
+  font-size: var(--cp-text-base);
+  line-height: var(--cp-lh-base);
+  color: var(--cp-text);
+}
+.cp-secondary {
+  font-size: var(--cp-text-base);
+  line-height: var(--cp-lh-base);
+  color: var(--cp-text-secondary);
+}
+.cp-muted {
+  font-size: var(--cp-text-sm);
+  line-height: var(--cp-lh-sm);
+  color: var(--cp-text-muted);
+}
+.cp-caption {
+  font-size: var(--cp-text-xs);
+  line-height: var(--cp-lh-xs);
+  color: var(--cp-text-muted);
+}
+.cp-label {
+  font-size: var(--cp-text-xs);
+  line-height: var(--cp-lh-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--cp-fw-medium);
+  color: var(--cp-text-muted);
+}
+.cp-kpi-value {
+  font-size: var(--cp-text-2xl);
+  line-height: var(--cp-lh-2xl);
+  font-weight: var(--cp-fw-bold);
+  color: var(--cp-text);
+  letter-spacing: -0.01em;
+}
+.cp-mono {
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
+}
+
+/* ---- Buttons --------------------------------------------- */
+.cp-btn-primary,
+.cp-btn-secondary,
+.cp-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--cp-radius-sm);
+  font-size: var(--cp-text-sm);
+  font-weight: var(--cp-fw-medium);
+  font-family: inherit;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--cp-duration-base) var(--cp-ease),
+              color var(--cp-duration-base) var(--cp-ease),
+              box-shadow var(--cp-duration-base) var(--cp-ease);
+}
+.cp-btn-primary {
+  background: var(--cp-navy-900);
+  color: #fff;
+}
+.cp-btn-primary:hover { background: var(--cp-navy-700); }
+.cp-btn-primary:focus-visible { outline: none; box-shadow: var(--cp-shadow-focus); }
+.cp-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cp-btn-secondary {
+  background: #fff;
+  color: var(--cp-text);
+  border-color: var(--cp-border);
+}
+.cp-btn-secondary:hover { background: var(--cp-surface); }
+.cp-btn-secondary:focus-visible { outline: none; box-shadow: var(--cp-shadow-focus); }
+
+.cp-btn-ghost {
+  background: transparent;
+  color: var(--cp-text-secondary);
+}
+.cp-btn-ghost:hover { background: var(--cp-surface); color: var(--cp-text); }
+
+/* ---- Card ------------------------------------------------ */
+.cp-card {
+  background: var(--cp-bg);
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius-lg);
+  padding: var(--cp-space-5);
+  box-shadow: var(--cp-shadow-card);
+}
+
+/* ---- Input ----------------------------------------------- */
+.cp-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius-sm);
+  font-family: inherit;
+  font-size: var(--cp-text-sm);
+  color: var(--cp-text);
+  transition: border-color var(--cp-duration-base) var(--cp-ease),
+              box-shadow var(--cp-duration-base) var(--cp-ease);
+}
+.cp-input::placeholder { color: var(--cp-text-faint); }
+.cp-input:focus { outline: none; border-color: var(--cp-navy-500); box-shadow: var(--cp-shadow-focus); }
+
+/* ---- Badge / chip --------------------------------------- */
+.cp-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: var(--cp-fw-semibold);
+  padding: 2px 6px;
+  border-radius: var(--cp-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

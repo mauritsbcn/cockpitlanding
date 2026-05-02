@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Iconography</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@0.469.0"></script>
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 4px; border-radius: 8px; }
+  .item .label { font-size: 10px; color: #4A5568; font-family: var(--cp-font-mono); }
+  .head { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 600; margin-bottom: 8px; }
+  i[data-lucide] { width: 20px; height: 20px; color: #0B2545; stroke-width: 2; }
+</style>
+</head>
+<body>
+  <div class="head">Lucide React · stroke 2 · used throughout product</div>
+  <div class="grid">
+    <div class="item"><i data-lucide="euro"></i><span class="label">euro</span></div>
+    <div class="item"><i data-lucide="shopping-cart"></i><span class="label">cart</span></div>
+    <div class="item"><i data-lucide="trending-up"></i><span class="label">trend ↑</span></div>
+    <div class="item"><i data-lucide="trending-down"></i><span class="label">trend ↓</span></div>
+    <div class="item"><i data-lucide="megaphone"></i><span class="label">ads</span></div>
+    <div class="item"><i data-lucide="package"></i><span class="label">orders</span></div>
+    <div class="item"><i data-lucide="refresh-cw"></i><span class="label">sync</span></div>
+    <div class="item"><i data-lucide="info"></i><span class="label">info</span></div>
+    <div class="item"><i data-lucide="bar-chart-3"></i><span class="label">chart</span></div>
+    <div class="item"><i data-lucide="settings"></i><span class="label">settings</span></div>
+    <div class="item"><i data-lucide="lock"></i><span class="label">lock</span></div>
+    <div class="item"><i data-lucide="check-circle-2"></i><span class="label">check</span></div>
+    <div class="item"><i data-lucide="alert-triangle"></i><span class="label">warn</span></div>
+    <div class="item"><i data-lucide="plug"></i><span class="label">connect</span></div>
+    <div class="item"><i data-lucide="search"></i><span class="label">search</span></div>
+    <div class="item"><i data-lucide="filter"></i><span class="label">filter</span></div>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

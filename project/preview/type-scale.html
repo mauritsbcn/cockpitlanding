@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Type scale</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: #fff; }
+  .row { display: grid; grid-template-columns: 80px 1fr 100px; gap: 14px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--cp-border-soft); }
+  .row:last-child { border-bottom: 0; }
+  .tag { font-size: 10px; font-family: var(--cp-font-mono); color: #718096; }
+  .meta { font-size: 10px; font-family: var(--cp-font-mono); color: #A0AEC0; text-align: right; }
+  .demo { color: #0B2545; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="tag">2xl</span><span class="demo" style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-.01em">Dashboard</span><span class="meta">24 / 32 · 700</span></div>
+  <div class="row"><span class="tag">xl</span><span class="demo" style="font-size:20px;line-height:28px;font-weight:600">Inloggen</span><span class="meta">20 / 28 · 600</span></div>
+  <div class="row"><span class="tag">base</span><span class="demo" style="font-size:14px;line-height:20px;font-weight:600">Recente bestellingen</span><span class="meta">14 / 20 · 600</span></div>
+  <div class="row"><span class="tag">sm</span><span style="font-size:13px;line-height:18px;color:#4A5568">Marketplace prestaties — deze maand</span><span class="meta">13 / 18 · 400</span></div>
+  <div class="row"><span class="tag">xs</span><span style="font-size:11px;line-height:16px;color:#718096;text-transform:uppercase;letter-spacing:.06em;font-weight:500">Bruto omzet</span><span class="meta">11 / 16 · 500</span></div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cockpit — Eén dashboard voor al je marketplaces</title>
+<meta name="description" content="Multi-marketplace dashboard voor NL/BE e-commerce sellers. Bol, Amazon, Praxis en Shopify in één overzicht. Verkoop, ads en marges per kanaal.">
+
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="landing.css">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#F7F9FC">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F7F9FC"/>
+    <g transform="translate(420 220)">
+      <rect width="360" height="360" rx="48" fill="#0B2545"/>
+      <text x="180" y="225" text-anchor="middle"
+        font-family="Inter, system-ui, sans-serif"
+        font-size="200" font-weight="700"
+        letter-spacing="-12" fill="#3A8FE0">C</text>
+    </g>
+    <text x="600" y="660" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif"
+      font-size="40" font-weight="600" fill="#0B2545"
+      letter-spacing="-1">Cockpit</text>
+  </svg>
+</template>
+
+<div id="root"></div>
+
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="sections-top.jsx"></script>
+<script type="text/babel" src="sections-bottom.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<script type="text/babel" data-presets="env,react">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "lang": "nl",
+  "accent": "blue",
+  "heroLayout": "split",
+  "showTrustStrip": true,
+  "showFloatingCallouts": true
+}/*EDITMODE-END*/;
+
+const ACCENT_PRESETS = {
+  blue:   { v500: '#3A8FE0', v50: '#EFF6FF' },
+  green:  { v500: '#16A34A', v50: '#ECFDF5' },
+  amber:  { v500: '#D97706', v50: '#FEF3C7' },
+  navy:   { v500: '#1B3E6F', v50: '#EDF2F7' },
+};
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  // Apply accent override
+  React.useEffect(() => {
+    const a = ACCENT_PRESETS[tweaks.accent] || ACCENT_PRESETS.blue;
+    document.documentElement.style.setProperty('--cp-blue-500', a.v500);
+    document.documentElement.style.setProperty('--cp-blue-50',  a.v50);
+  }, [tweaks.accent]);
+
+  // Hide floating callouts via class on body
+  React.useEffect(() => {
+    document.body.classList.toggle('lp-no-floats', !tweaks.showFloatingCallouts);
+  }, [tweaks.showFloatingCallouts]);
+
+  const handleDemo   = () => alert('Demo openen — placeholder');
+  const handleIntake = () => alert('Intake plannen — placeholder');
+
+  return (
+    <React.Fragment>
+      <Nav onDemo={handleDemo} onIntake={handleIntake} />
+      <main>
+        <Hero onDemo={handleDemo} onIntake={handleIntake} layout={tweaks.heroLayout} />
+        {tweaks.showTrustStrip && <TrustStrip />}
+        <ProblemSection />
+        <FeatureSection />
+        <HowItWorks />
+        <Pricing onIntake={handleIntake} />
+        <FAQ />
+        <CTABlock onDemo={handleDemo} onIntake={handleIntake} />
+      </main>
+      <Footer />
+
+      <TweaksPanel title="Cockpit landing">
+        <TweakSection title="Brand">
+          <TweakRadio label="Accentkleur" value={tweaks.accent}
+            onChange={v => setTweak('accent', v)}
+            options={[
+              { value: 'blue',  label: 'Blauw' },
+              { value: 'green', label: 'Groen' },
+              { value: 'amber', label: 'Amber' },
+              { value: 'navy',  label: 'Navy' },
+            ]} />
+        </TweakSection>
+        <TweakSection title="Layout">
+          <TweakToggle label="Trust-strip tonen"
+            value={tweaks.showTrustStrip}
+            onChange={v => setTweak('showTrustStrip', v)} />
+          <TweakToggle label="Hero-callouts tonen"
+            value={tweaks.showFloatingCallouts}
+            onChange={v => setTweak('showFloatingCallouts', v)} />
+        </TweakSection>
+      </TweaksPanel>
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+<style>
+  body.lp-no-floats .lp-mock-callout { display: none; }
+</style>
+
+</body>
+</html>

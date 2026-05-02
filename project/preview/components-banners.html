@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Banners & empty states</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #F7F9FC; display: flex; flex-direction: column; gap: 14px; }
+  .card { background:#fff; border:1px solid #E5EAF0; border-radius:12px; padding:18px; }
+  .row { display: flex; gap: 12px; align-items: flex-start; }
+  .demo { border-color:#3A8FE0; background:#EFF6FF; }
+  .icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; color: #3A8FE0; font-weight: 700; text-align:center; }
+  .empty { border-style: dashed; }
+  .av { width: 36px; height: 36px; border-radius: 8px; background: #EFF6FF; display:flex; align-items:center; justify-content:center; font-size: 18px; }
+  h3 { font-size: 14px; font-weight: 600; margin: 0 0 4px; color: #0B2545; }
+  p { font-size: 13px; margin: 0; color: #4A5568; line-height: 1.45; }
+  .actions { margin-top: 10px; display:flex; gap: 8px; }
+</style>
+</head>
+<body>
+  <div class="card demo">
+    <div class="row">
+      <div class="icon">i</div>
+      <div>
+        <h3>🎬 Demo modus actief</h3>
+        <p>Je ziet voorbeelddata van een fictieve seller. Schakel naar &ldquo;Live data&rdquo; bovenaan om je eigen marketplace data te zien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card empty">
+    <div class="row">
+      <div class="av">👋</div>
+      <div>
+        <h3>Welkom! Je hebt nog geen data.</h3>
+        <p>Verbind je marketplace om automatisch orders binnen te halen, of bekijk eerst de demo modus om te zien hoe het dashboard er met data uitziet.</p>
+        <div class="actions">
+          <button class="cp-btn-primary">Verbind een marketplace</button>
+          <button class="cp-btn-secondary">Bekijk demo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

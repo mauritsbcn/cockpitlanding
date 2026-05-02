@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40">
+  <text x="0" y="28" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">Cockpit</text>
+  <circle cx="138" cy="20" r="6" fill="#FFFFFF"></circle>
+  <circle cx="138" cy="20" r="2.4" fill="#3A8FE0"></circle>
+</svg>

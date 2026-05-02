@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Table</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #F7F9FC; font-variant-numeric: tabular-nums; }
+  .card { background:#fff; border:1px solid #E5EAF0; border-radius:12px; padding:0 4px; box-shadow: 0 1px 2px rgba(11,37,69,.04); overflow:hidden; }
+  table { width:100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #718096; font-weight: 500; padding: 12px 14px; border-bottom: 1px solid #E5EAF0; }
+  th.r, td.r { text-align: right; }
+  td { padding: 10px 14px; border-bottom: 1px solid #F0F4F8; color: #4A5568; }
+  tr:last-child td { border-bottom: 0; }
+  .badge { font-size: 10px; font-weight: 600; padding: 3px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .pos { color: #16A34A; font-weight: 600; }
+  .num { color: #0B2545; font-weight: 500; }
+  tfoot td { border-top: 2px solid #0B2545; padding-top: 12px; color: #0B2545; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Marktplaats</th><th class="r">Orders</th><th class="r">Bruto</th><th class="r">Netto</th><th class="r">Marge</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="badge" style="background:#0066B220;color:#0066B2">Bol.com</span></td><td class="r">812</td><td class="r num">€72.140</td><td class="r num">€58.220</td><td class="r pos">19,1%</td></tr>
+        <tr><td><span class="badge" style="background:#FF990020;color:#FF9900">Amazon NL</span></td><td class="r">312</td><td class="r num">€31.880</td><td class="r num">€26.140</td><td class="r pos">17,8%</td></tr>
+        <tr><td><span class="badge" style="background:#00843D20;color:#00843D">Praxis</span></td><td class="r">114</td><td class="r num">€14.220</td><td class="r num">€11.890</td><td class="r pos">16,2%</td></tr>
+        <tr><td><span class="badge" style="background:#5A8E3A20;color:#5A8E3A">Shopify</span></td><td class="r">42</td><td class="r num">€6.340</td><td class="r num">€5.880</td><td class="r pos">22,4%</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>Totaal</td><td class="r">1.280</td><td class="r">€124.580</td><td class="r">€102.130</td><td class="r">18,2%</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

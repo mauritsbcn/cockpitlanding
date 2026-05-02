@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cockpit · Brand colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .swatch {
+    border-radius: 10px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    border: 1px solid var(--cp-border);
+    box-shadow: var(--cp-shadow-card);
+  }
+  .swatch .name { font-size: 11px; font-weight: 600; }
+  .swatch .hex  { font-size: 10px; font-family: var(--cp-font-mono); opacity: .8; }
+  .dark .name, .dark .hex { color: #fff; }
+  .light .name { color: #0B2545; }
+  .light .hex  { color: #4A5568; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="swatch dark"  style="background:#0B2545"><span class="name">navy 900</span><span class="hex">#0B2545</span></div>
+    <div class="swatch dark"  style="background:#13315C"><span class="name">navy 700</span><span class="hex">#13315C</span></div>
+    <div class="swatch dark"  style="background:#1B3E6F"><span class="name">navy 500</span><span class="hex">#1B3E6F</span></div>
+    <div class="swatch dark"  style="background:#3A8FE0"><span class="name">blue 500</span><span class="hex">#3A8FE0</span></div>
+    <div class="swatch light" style="background:#EFF6FF"><span class="name">blue 50</span><span class="hex">#EFF6FF</span></div>
+  </div>
+</body>
+</html>
