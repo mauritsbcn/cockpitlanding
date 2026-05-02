@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CONTACT_MAILTO } from "@/lib/site";
 
 function ArrowRight({ size = 16 }: { size?: number }) {
   return (
@@ -19,9 +20,9 @@ export default function CTABlock() {
             eigen marketplaces, zodat je in dezelfde call kijkt naar je echte cijfers.
           </p>
           <div className="lp-cta__buttons">
-            <Link href="/login" className="lp-btn lp-btn--on-navy-primary">
+            <a href={CONTACT_MAILTO} className="lp-btn lp-btn--on-navy-primary">
               Plan een intake <ArrowRight size={16} />
-            </Link>
+            </a>
             <Link href="/dashboard" className="lp-btn lp-btn--on-navy-ghost">
               Bekijk de demo
             </Link>

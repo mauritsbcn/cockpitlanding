@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { APP_LOGIN_URL } from "@/lib/site";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,9 +30,9 @@ export default function Nav() {
         </div>
 
         <div className="lp-nav__cta">
-          <Link href="/login" className="lp-btn lp-btn--ghost lp-btn--sm">
+          <a href={APP_LOGIN_URL} className="lp-btn lp-btn--ghost lp-btn--sm">
             Inloggen
-          </Link>
+          </a>
           <Link href="/dashboard" className="lp-btn lp-btn--primary lp-btn--sm">
             Bekijk de demo
             <ArrowRight size={14} />

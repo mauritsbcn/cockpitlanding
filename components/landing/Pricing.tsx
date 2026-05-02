@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CONTACT_MAILTO } from "@/lib/site";
 
 function CheckSmIcon() {
   return (
@@ -61,9 +62,9 @@ export default function Pricing() {
             ))}
           </ul>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <Link href="/login" className="lp-btn lp-btn--primary" style={{ flex: 1, minWidth: 200 }}>
+            <a href={CONTACT_MAILTO} className="lp-btn lp-btn--primary" style={{ flex: 1, minWidth: 200 }}>
               Plan een intake <ArrowRight size={16} />
-            </Link>
+            </a>
             <Link href="/dashboard" className="lp-btn lp-btn--ghost" style={{ flex: 1, minWidth: 200 }}>
               Bekijk de demo
             </Link>

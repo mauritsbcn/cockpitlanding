@@ -1,20 +1,28 @@
 import Link from "next/link";
+import {
+  APP_LOGIN_URL,
+  CONTACT_MAILTO,
+  PRIVACY_MAILTO,
+  MEUBELSHOP_URL,
+} from "@/lib/site";
 
 const cols = [
   {
     title: "Product",
-    links: ["Functies", "Prijzen", "Roadmap", "Status", "Demo aanvragen"],
-    hrefs: ["/#features", "/#pricing", "#", "#", "/dashboard"],
+    items: [
+      { label: "Functies", href: "/#features" },
+      { label: "Prijzen", href: "/#pricing" },
+      { label: "Bekijk de demo", href: "/dashboard" },
+      { label: "Inloggen", href: APP_LOGIN_URL, external: true },
+    ],
   },
   {
     title: "Bedrijf",
-    links: ["Over Maurits Group", "Hocus Picus", "meubelshop.nl", "Contact"],
-    hrefs: ["#", "#", "#", "#"],
-  },
-  {
-    title: "Resources",
-    links: ["Help-center", "API-docs", "Blog", "Changelog"],
-    hrefs: ["#", "#", "#", "#"],
+    items: [
+      { label: "meubelshop.nl", href: MEUBELSHOP_URL, external: true },
+      { label: "Hocus Picus", href: MEUBELSHOP_URL, external: true },
+      { label: "Contact", href: CONTACT_MAILTO },
+    ],
   },
 ];
 
@@ -38,9 +46,17 @@ export default function Footer() {
             <div key={c.title} className="lp-footer__col">
               <div className="lp-footer__col-title">{c.title}</div>
               <ul>
-                {c.links.map((l, i) => (
-                  <li key={l}>
-                    <a href={c.hrefs[i]}>{l}</a>
+                {c.items.map((item) => (
+                  <li key={item.label}>
+                    {item.external ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer">
+                        {item.label}
+                      </a>
+                    ) : item.href.startsWith("mailto:") ? (
+                      <a href={item.href}>{item.label}</a>
+                    ) : (
+                      <a href={item.href}>{item.label}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -48,12 +64,12 @@ export default function Footer() {
           ))}
         </div>
         <div className="lp-footer__bottom">
-          <span>© 2025 Maurits Group B.V. · KvK 12345678</span>
+          <span>© {new Date().getFullYear()} Maurits Group B.V.</span>
           <div className="lp-footer__legal">
-            <a href="#">Privacy</a>
-            <a href="#">Voorwaarden</a>
-            <a href="#">Verwerkersovereenkomst</a>
-            <a href="#">Cookies</a>
+            <a href={PRIVACY_MAILTO}>Privacy</a>
+            <a href={PRIVACY_MAILTO}>Voorwaarden</a>
+            <a href={PRIVACY_MAILTO}>Verwerkersovereenkomst</a>
+            <a href={PRIVACY_MAILTO}>Cookies</a>
           </div>
         </div>
       </div>

@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LayoutDashboard, ShoppingBag, Package, TrendingUp, Plug, LogOut } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/site";
 
 const NAV_ITEMS = [
-  { href: "/dashboard", label: "Overzicht", icon: LayoutDashboard },
-  { href: "/dashboard/orders", label: "Bestellingen", icon: ShoppingBag },
-  { href: "/dashboard/producten", label: "Producten", icon: Package },
-  { href: "/dashboard/financieel", label: "Financieel", icon: TrendingUp },
-  { href: "/dashboard/connecties", label: "Connecties", icon: Plug },
+  { href: "/dashboard", label: "Overzicht", icon: LayoutDashboard, demoOnly: false },
+  { href: "/dashboard/orders", label: "Bestellingen", icon: ShoppingBag, demoOnly: true },
+  { href: "/dashboard/producten", label: "Producten", icon: Package, demoOnly: true },
+  { href: "/dashboard/financieel", label: "Financieel", icon: TrendingUp, demoOnly: true },
+  { href: "/dashboard/connecties", label: "Connecties", icon: Plug, demoOnly: true },
 ];
 
 export default function Sidebar() {
@@ -27,6 +28,23 @@ export default function Sidebar() {
           {NAV_ITEMS.map((item) => {
             const isActive = pathname === item.href;
             const Icon = item.icon;
+
+            if (item.demoOnly) {
+              return (
+                <div
+                  key={item.href}
+                  className="flex items-center gap-2.5 px-3 py-2 text-sm rounded-lg text-white/35 cursor-not-allowed select-none"
+                  title="Beschikbaar in productie — log in voor volledige toegang"
+                >
+                  <Icon className="w-4 h-4 flex-shrink-0 text-white/25" />
+                  <span className="flex-1">{item.label}</span>
+                  <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/5 text-white/40 font-medium">
+                    Pro
+                  </span>
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
@@ -45,8 +63,14 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      <div className="mt-auto p-6 pt-4 border-t border-white/10">
-        <div className="text-xs text-white/40 mb-3 uppercase tracking-wider font-medium">Demo modus</div>
+      <div className="mt-auto p-6 pt-4 border-t border-white/10 space-y-2">
+        <div className="text-xs text-white/40 uppercase tracking-wider font-medium">Demo modus</div>
+        <a
+          href={APP_LOGIN_URL}
+          className="flex items-center justify-center gap-2 text-xs text-white bg-[#3A8FE0] hover:bg-[#2F7CC9] transition-colors px-3 py-2 rounded-lg font-medium"
+        >
+          Inloggen op productie
+        </a>
         <Link
           href="/"
           className="flex items-center gap-2 text-xs text-white/60 hover:text-white transition-colors"
