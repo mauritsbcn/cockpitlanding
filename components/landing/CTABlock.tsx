@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { CONTACT_MAILTO } from "@/lib/site";
+import { TRIAL_MAILTO, INTRO_CALL_MAILTO } from "@/lib/site";
 
 function ArrowRight({ size = 16 }: { size?: number }) {
   return (
@@ -16,16 +15,17 @@ export default function CTABlock() {
         <div className="lp-cta">
           <h2>Klaar om te zien wat je écht verdient?</h2>
           <p>
-            Plan een intake van 20 minuten. We zetten je demo-account klaar met je
-            eigen marketplaces, zodat je in dezelfde call kijkt naar je echte cijfers.
+            Start 30 dagen gratis, of plan eerst de gratis introductie-call van een uur.
+            We kijken samen naar je doel, je producten en je kanalen — en je vertrekt
+            met een concrete roadmap.
           </p>
           <div className="lp-cta__buttons">
-            <a href={CONTACT_MAILTO} className="lp-btn lp-btn--on-navy-primary">
-              Plan een intake <ArrowRight size={16} />
+            <a href={TRIAL_MAILTO} className="lp-btn lp-btn--on-navy-primary">
+              Start gratis trial <ArrowRight size={16} />
             </a>
-            <Link href="/dashboard" className="lp-btn lp-btn--on-navy-ghost">
-              Bekijk de demo
-            </Link>
+            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--on-navy-ghost">
+              Plan gratis introductie-call
+            </a>
           </div>
         </div>
       </div>

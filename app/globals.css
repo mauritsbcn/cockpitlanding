@@ -632,9 +632,9 @@ button { font-family: inherit; }
 }
 
 /* How it works */
-.lp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+.lp-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
 .lp-steps::before {
-  content: ""; position: absolute; top: 32px; left: 14%; right: 14%; height: 2px;
+  content: ""; position: absolute; top: 32px; left: 11%; right: 11%; height: 2px;
   background: repeating-linear-gradient(to right, var(--cp-border) 0 8px, transparent 8px 16px);
   z-index: 0;
 }
@@ -677,6 +677,46 @@ button { font-family: inherit; }
   .lp-pricing-card__features { grid-template-columns: 1fr; }
   .lp-pricing-card__price-num { font-size: 44px; }
 }
+
+/* Pricing — 3-koloms grid */
+.lp-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+.lp-pricing-card--grid { max-width: none; margin: 0; padding: 32px 28px; display: flex; flex-direction: column; }
+.lp-pricing-card--grid .lp-pricing-card__caption { margin-bottom: 20px; }
+.lp-pricing-card--grid .lp-pricing-card__features { margin-bottom: 24px; }
+.lp-pricing-card--featured { border-color: var(--cp-blue-500); box-shadow: 0 24px 60px -20px rgba(58,143,224,0.30); }
+.lp-pricing-card__badge {
+  position: absolute; top: 14px; right: 14px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  background: rgba(58,143,224,0.10); color: var(--cp-blue-500);
+  padding: 4px 10px; border-radius: 999px;
+}
+@media (max-width: 900px) { .lp-pricing-grid { grid-template-columns: 1fr; } }
+
+/* Koppelingen logo-grid */
+.lp-logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 860px; margin: 0 auto; }
+.lp-logo-card {
+  display: flex; align-items: center; gap: 14px;
+  background: #fff; border: 1px solid var(--cp-border); border-radius: 12px;
+  padding: 18px 20px; box-shadow: 0 4px 12px -6px rgba(11,37,69,0.08);
+}
+.lp-logo-card__mark {
+  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 18px; font-weight: 700;
+}
+.lp-logo-card__name { font-size: 14.5px; font-weight: 700; color: var(--cp-text); }
+.lp-logo-card__sub { font-size: 12px; color: var(--cp-text-muted); }
+@media (max-width: 720px) { .lp-logo-grid { grid-template-columns: 1fr; } }
+
+/* Terugverdientijd */
+.lp-payback { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
+.lp-payback__cell {
+  text-align: center; background: #FAFBFD; border: 1px solid var(--cp-border);
+  border-radius: 14px; padding: 32px 20px;
+}
+.lp-payback__num { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; color: var(--cp-navy-900); font-variant-numeric: tabular-nums; }
+.lp-payback__lbl { font-size: 13.5px; color: var(--cp-text-secondary); margin-top: 8px; line-height: 1.5; }
+@media (max-width: 720px) { .lp-payback { grid-template-columns: 1fr; } }
 
 /* FAQ */
 .lp-faq { max-width: 760px; margin: 0 auto; }

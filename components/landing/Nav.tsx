@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { APP_LOGIN_URL } from "@/lib/site";
+import { APP_LOGIN_URL, TRIAL_MAILTO } from "@/lib/site";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +24,8 @@ export default function Nav() {
 
         <div className="lp-nav__links">
           <a href="#features">Functies</a>
-          <a href="#how">Hoe werkt het</a>
+          <a href="#kosten">Kosten</a>
+          <a href="#koppelingen">Koppelingen</a>
           <a href="#pricing">Prijzen</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -33,10 +34,10 @@ export default function Nav() {
           <a href={APP_LOGIN_URL} className="lp-btn lp-btn--ghost lp-btn--sm">
             Inloggen
           </a>
-          <Link href="/dashboard" className="lp-btn lp-btn--primary lp-btn--sm">
-            Bekijk de demo
+          <a href={TRIAL_MAILTO} className="lp-btn lp-btn--primary lp-btn--sm">
+            Start gratis trial
             <ArrowRight size={14} />
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

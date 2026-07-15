@@ -17,7 +17,15 @@ const items = [
   },
   {
     q: "Wat kost het precies?",
-    a: "Het standaardabonnement ligt tussen €99 en €299 per maand, afhankelijk van het aantal marketplaces en SKU's. We stellen de prijs vast in de intake — geen verborgen extra's, geen seat-fees, geen per-order-toeslagen.",
+    a: "€49,95 per maand, maandelijks of jaarlijks te betalen. Daar zitten 2 gebruikers bij in; elke extra gebruiker kost €9,95 per maand. Geen setup-fee, geen per-order-toeslagen. Je start altijd met 30 dagen gratis.",
+  },
+  {
+    q: "Ik verstuur (deels) zelf. Werkt dat ook?",
+    a: "Ja. Voor zelf verstuurde orders (FBM) staat een download-template klaar met vaste kolommen en één voorbeeldproduct. Vul je verzend- en pick & pack-kosten in, upload het bestand, en Cockpit rekent ze per order mee — naast je FBA/LVB-orders.",
+  },
+  {
+    q: "Hoe vaak wordt het overzicht bijgewerkt?",
+    a: "De data synchroniseert doorlopend. De samenvatting “dit heb je vandaag gedaan” ontvang je dagelijks of wekelijks — dat stel je zelf in.",
   },
   {
     q: "Zit ik vast aan een contract?",

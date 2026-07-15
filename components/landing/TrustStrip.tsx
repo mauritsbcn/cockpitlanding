@@ -12,7 +12,7 @@ export default function TrustStrip() {
         </div>
         <div className="lp-trust__item">
           <span className="lp-trust__icon"><EyeIcon /></span>
-          <span>Werkelijke winst, niet alleen omzet</span>
+          <span>Cijfers die kloppen — gevalideerd tegen de marketplace-factuur</span>
         </div>
       </div>
     </section>

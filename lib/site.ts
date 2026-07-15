@@ -13,3 +13,10 @@ export const CONTACT_MAILTO =
 export const PRIVACY_MAILTO = `mailto:${CONTACT_EMAIL}`;
 
 export const MEUBELSHOP_URL = "https://meubelshop.nl";
+
+export const TRIAL_MAILTO =
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Gratis trial starten")}`;
+export const INTRO_CALL_MAILTO =
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Gratis introductie-call (1 uur)")}`;
+export const AGENCY_MAILTO =
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Agency / white label")}`;

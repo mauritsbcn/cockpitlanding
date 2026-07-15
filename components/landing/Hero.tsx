@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TRIAL_MAILTO, INTRO_CALL_MAILTO } from "@/lib/site";
 
 const MP_COLORS = {
   bol: "#0066B2",
@@ -18,18 +19,22 @@ export default function Hero() {
         <div className="lp-hero__copy">
           <span className="lp-eyebrow">Multi-marketplace dashboard</span>
           <h1 className="lp-h1">De cockpit voor je marketplace business.</h1>
-          <p className="lp-h1-sub">Zie eindelijk wat je écht verdient.</p>
+          <p className="lp-h1-sub">Cijfers die kloppen. Elke dag opnieuw.</p>
           <p className="lp-lead">
-            Bol, Amazon, Praxis en Shopify in één overzicht. Verkoop, ads en marges per kanaal —
-            zonder eindeloos tabs wisselen of zelf cijfers samenrekenen.
+            Bol, Amazon, Praxis en Shopify in één overzicht. Verkoop, ad spend, verzendkosten
+            en retouren per kanaal — elke ochtend zie je wat er vandaag gebeurt.
           </p>
           <div className="lp-hero__cta">
-            <Link href="/dashboard" className="lp-btn lp-btn--primary">
-              Bekijk de demo
+            <a href={TRIAL_MAILTO} className="lp-btn lp-btn--primary">
+              Start gratis trial
               <ArrowRight size={16} />
-            </Link>
-            <a href="#pricing" className="lp-btn lp-btn--ghost">Plan een intake</a>
+            </a>
+            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">Plan gratis introductie-call</a>
           </div>
+          <p style={{ fontSize: 13, color: "var(--cp-text-muted)", marginTop: 14, marginBottom: 0 }}>
+            30 dagen gratis · geen creditcard · of{" "}
+            <Link href="/dashboard" style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>bekijk eerst de demo</Link>
+          </p>
 
           <div style={{ marginTop: 28, display: "flex", alignItems: "center", gap: 14, fontSize: 13, color: "var(--cp-text-muted)" }}>
             <div style={{ display: "flex" }}>
@@ -145,7 +150,7 @@ function HeroDashboardMock() {
           </div>
           <div className="lp-mock-charts">
             <MockBarChart />
-            <MockDonut />
+            <MockTopProducts />
           </div>
         </div>
       </div>
@@ -223,7 +228,7 @@ function MockBarChart() {
           ))}
         </div>
       </div>
-      <svg viewBox="0 0 280 100" preserveAspectRatio="none" style={{ width: "100%", height: 110, display: "block" }}>
+      <svg viewBox="0 0 280 100" preserveAspectRatio="none" style={{ width: "100%", height: 130, display: "block" }}>
         {[0.25, 0.5, 0.75, 1].map((t, i) => (
           <line key={i} x1="0" x2="280" y1={100 - 100 * t} y2={100 - 100 * t} stroke="#E5EAF0" strokeWidth="0.5" strokeDasharray="2 3" />
         ))}
@@ -247,66 +252,46 @@ function MockBarChart() {
   );
 }
 
-function MockDonut() {
-  const slices = [
-    { label: "Bol", value: 45, color: MP_COLORS.bol },
-    { label: "Amazon", value: 28, color: MP_COLORS.amazon },
-    { label: "Praxis", value: 18, color: MP_COLORS.praxis },
-    { label: "Shopify", value: 9, color: MP_COLORS.shopify },
+function MockTopProducts() {
+  const products = [
+    { name: "Bijzettafel Ø45", net: "€34,56", icon: "table", mp: "bol" as MpKey },
+    { name: "Fauteuil Bouclé", net: "€61,20", icon: "chair", mp: "amazon" as MpKey },
+    { name: "Vloerlamp Rotan", net: "€28,05", icon: "lamp", mp: "praxis" as MpKey },
+    { name: "Wandrek Eiken", net: "€19,84", icon: "shelf", mp: "shopify" as MpKey },
   ];
-  const r = 32, cx = 50, cy = 50;
-  const circ = 2 * Math.PI * r;
-  let acc = 0;
-
   return (
     <div className="lp-mock-card">
       <div className="lp-mock-card__head">
         <div>
-          <div className="lp-mock-card__title">Omzet per marketplace</div>
-          <div className="lp-mock-card__sub">% van totaal</div>
+          <div className="lp-mock-card__title">Top producten</div>
+          <div className="lp-mock-card__sub">Netto per stuk</div>
         </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-        <svg viewBox="0 0 100 100" style={{ width: 88, height: 88, flexShrink: 0 }}>
-          <circle cx={cx} cy={cy} r={r} fill="none" stroke="#F0F4F8" strokeWidth="13" />
-          {slices.map((s, i) => {
-            const dash = (s.value / 100) * circ;
-            const offset = circ - acc;
-            acc += dash;
-            return (
-              <circle
-                key={i}
-                cx={cx} cy={cy} r={r} fill="none"
-                stroke={s.color} strokeWidth="13"
-                strokeDasharray={`${dash} ${circ - dash}`}
-                strokeDashoffset={offset}
-                transform={`rotate(-90 ${cx} ${cy})`}
-              />
-            );
-          })}
-          <text x={cx} y={cy - 1} textAnchor="middle" dominantBaseline="middle"
-            fontSize="13" fontWeight="700" fill="#0B2545"
-            style={{ fontFamily: "Inter, system-ui", letterSpacing: "-0.02em" }}>
-            €159k
-          </text>
-          <text x={cx} y={cy + 11} textAnchor="middle" dominantBaseline="middle"
-            fontSize="6" fill="#718096" fontWeight="500"
-            style={{ fontFamily: "Inter, system-ui" }}>
-            totaal
-          </text>
-        </svg>
-        <div style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 10, width: "100%" }}>
-          {slices.map((s, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: 5, color: "var(--cp-text-secondary)", minWidth: 0 }}>
-              <span style={{ width: 8, height: 8, borderRadius: 2, background: s.color, flexShrink: 0 }} />
-              <span style={{ flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{s.label}</span>
-              <span style={{ fontVariantNumeric: "tabular-nums", fontWeight: 600, color: "var(--cp-text)", flexShrink: 0 }}>{s.value}%</span>
-            </div>
-          ))}
-        </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 7, width: "100%" }}>
+        {products.map((p) => (
+          <div key={p.name} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 10.5, minWidth: 0 }}>
+            <span style={{ width: 26, height: 26, borderRadius: 6, background: "#F0F4F8", border: "1px solid var(--cp-border)", display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "var(--cp-navy-700)" }}>
+              <ProductIcon name={p.icon} />
+            </span>
+            <span style={{ flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "var(--cp-text)" }}>{p.name}</span>
+            <span style={{ width: 7, height: 7, borderRadius: "50%", background: MP_COLORS[p.mp], flexShrink: 0 }} title={MP_LABELS[p.mp]} />
+            <span style={{ fontVariantNumeric: "tabular-nums", fontWeight: 600, color: "var(--cp-success, #16A34A)", flexShrink: 0 }}>{p.net}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
+}
+
+function ProductIcon({ name }: { name: string }) {
+  const s = { width: 14, height: 14, stroke: "currentColor", fill: "none" as const, strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  switch (name) {
+    case "table": return <svg viewBox="0 0 24 24" style={s}><ellipse cx="12" cy="7" rx="8" ry="2.5" /><path d="M6 9v9M18 9v9M12 9.5V19" /></svg>;
+    case "chair": return <svg viewBox="0 0 24 24" style={s}><path d="M7 3v9h10V3M7 12h10M8 12v9M16 12v9M7 16h10" /></svg>;
+    case "lamp": return <svg viewBox="0 0 24 24" style={s}><path d="M8 3h8l2 7H6l2-7zM12 10v10M8 21h8" /></svg>;
+    case "shelf": return <svg viewBox="0 0 24 24" style={s}><path d="M4 4v16M20 4v16M4 9h16M4 15h16" /></svg>;
+    default: return null;
+  }
 }
 
 /* ---- Inline SVG icons ---- */

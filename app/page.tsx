@@ -2,7 +2,11 @@ import Nav from "@/components/landing/Nav";
 import Hero from "@/components/landing/Hero";
 import TrustStrip from "@/components/landing/TrustStrip";
 import ProblemSection from "@/components/landing/ProblemSection";
-import FeatureSection from "@/components/landing/FeatureSection";
+import DailyDigest from "@/components/landing/DailyDigest";
+import CostBreakdown from "@/components/landing/CostBreakdown";
+import Integrations from "@/components/landing/Integrations";
+import Payback from "@/components/landing/Payback";
+import OperatorProof from "@/components/landing/OperatorProof";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
@@ -17,7 +21,11 @@ export default function LandingPage() {
         <Hero />
         <TrustStrip />
         <ProblemSection />
-        <FeatureSection />
+        <DailyDigest />
+        <CostBreakdown />
+        <Integrations />
+        <Payback />
+        <OperatorProof />
         <HowItWorks />
         <Pricing />
         <FAQ />
