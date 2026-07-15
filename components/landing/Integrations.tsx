@@ -1,10 +1,10 @@
 const CONNECTIONS = [
-  { name: "Bol.com", sub: "Verkoop + Ads + Retouren", color: "#0000A4", mark: "bol" },
-  { name: "Amazon", sub: "NL / BE · Verkoop + Ads", color: "#232F3E", mark: "amazon" },
-  { name: "Praxis", sub: "via Mirakl", color: "#00843D", mark: "PRAXIS" },
-  { name: "Brico", sub: "via Mirakl · beta", color: "#E30613", mark: "Brico" },
-  { name: "Shopify", sub: "Eigen webshop", color: "#5E8E3E", mark: "shopify" },
-  { name: "Zelf verstuurd", sub: "FBM · CSV-template", color: "#0B2545", mark: "CSV ↑" },
+  { name: "Bol.com", sub: "Verkoop + Ads + Retouren", logo: "/logos/bol.svg", logoH: 20 },
+  { name: "Amazon", sub: "NL / BE · Verkoop + Ads", logo: "/logos/amazon.svg", logoH: 22 },
+  { name: "Praxis", sub: "via Mirakl", logo: "/logos/praxis.svg", logoH: 18 },
+  { name: "Brico", sub: "via Mirakl · beta", logo: "/logos/brico.svg", logoH: 24 },
+  { name: "Shopify", sub: "Eigen webshop", logo: "/logos/shopify.svg", logoH: 24 },
+  { name: "Zelf verstuurd", sub: "FBM · CSV-template", logo: null, logoH: 0 },
 ];
 
 export default function Integrations() {
@@ -23,7 +23,14 @@ export default function Integrations() {
         <div className="lp-logo-grid">
           {CONNECTIONS.map((c) => (
             <div key={c.name} className="lp-logo-card">
-              <span className="lp-logo-card__mark lp-logo-card__mark--word" style={{ background: c.color }}>{c.mark}</span>
+              <span className="lp-logo-card__img">
+                {c.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={c.logo} alt={`${c.name} logo`} style={{ height: c.logoH, width: "auto", maxWidth: 96 }} />
+                ) : (
+                  <span className="lp-logo-card__mark lp-logo-card__mark--word" style={{ background: "#0B2545" }}>CSV ↑</span>
+                )}
+              </span>
               <div>
                 <div className="lp-logo-card__name">{c.name}</div>
                 <div className="lp-logo-card__sub">{c.sub}</div>

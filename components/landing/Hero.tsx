@@ -36,23 +36,15 @@ export default function Hero() {
             <Link href="/dashboard" style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>bekijk eerst de demo</Link>
           </p>
 
-          <div style={{ marginTop: 28, display: "flex", alignItems: "center", gap: 14, fontSize: 13, color: "var(--cp-text-muted)" }}>
-            <div style={{ display: "flex" }}>
-              {(Object.keys(MP_COLORS) as MpKey[]).map((k, i) => (
-                <span
-                  key={k}
-                  title={MP_LABELS[k]}
-                  style={{
-                    width: 28, height: 28, borderRadius: "50%",
-                    background: MP_COLORS[k], border: "2px solid #fff",
-                    marginLeft: i === 0 ? 0 : -8,
-                    display: "inline-flex", alignItems: "center", justifyContent: "center",
-                    color: "#fff", fontSize: 11, fontWeight: 700,
-                  }}
-                >
-                  {MP_LABELS[k][0]}
-                </span>
-              ))}
+          <div style={{ marginTop: 28, display: "flex", alignItems: "center", flexWrap: "wrap", gap: 18, fontSize: 13, color: "var(--cp-text-muted)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+              {/* eslint-disable @next/next/no-img-element */}
+              <img src="/logos/bol.svg" alt="Bol.com" style={{ height: 15, width: "auto" }} />
+              <img src="/logos/amazon.svg" alt="Amazon" style={{ height: 16, width: "auto" }} />
+              <img src="/logos/praxis.svg" alt="Praxis" style={{ height: 14, width: "auto" }} />
+              <img src="/logos/brico.svg" alt="Brico" style={{ height: 17, width: "auto" }} />
+              <img src="/logos/shopify.svg" alt="Shopify" style={{ height: 17, width: "auto" }} />
+              {/* eslint-enable @next/next/no-img-element */}
             </div>
             <span>Werkt vanaf dag 1 met de marketplaces die je al gebruikt</span>
           </div>
