@@ -1,10 +1,10 @@
 const CONNECTIONS = [
-  { name: "Bol.com", sub: "Verkoop + Ads + Retouren", color: "#0066B2", mark: "b" },
-  { name: "Amazon", sub: "NL / BE · Verkoop + Ads", color: "#FF9900", mark: "a" },
-  { name: "Praxis", sub: "via Mirakl", color: "#00843D", mark: "P" },
-  { name: "Brico", sub: "via Mirakl · beta", color: "#E30613", mark: "B" },
-  { name: "Shopify", sub: "Eigen webshop", color: "#5A8E3A", mark: "S" },
-  { name: "Zelf verstuurd", sub: "FBM · CSV-template", color: "#0B2545", mark: "↑" },
+  { name: "Bol.com", sub: "Verkoop + Ads + Retouren", color: "#0000A4", mark: "bol" },
+  { name: "Amazon", sub: "NL / BE · Verkoop + Ads", color: "#232F3E", mark: "amazon" },
+  { name: "Praxis", sub: "via Mirakl", color: "#00843D", mark: "PRAXIS" },
+  { name: "Brico", sub: "via Mirakl · beta", color: "#E30613", mark: "Brico" },
+  { name: "Shopify", sub: "Eigen webshop", color: "#5E8E3E", mark: "shopify" },
+  { name: "Zelf verstuurd", sub: "FBM · CSV-template", color: "#0B2545", mark: "CSV ↑" },
 ];
 
 export default function Integrations() {
@@ -23,7 +23,7 @@ export default function Integrations() {
         <div className="lp-logo-grid">
           {CONNECTIONS.map((c) => (
             <div key={c.name} className="lp-logo-card">
-              <span className="lp-logo-card__mark" style={{ background: c.color }}>{c.mark}</span>
+              <span className="lp-logo-card__mark lp-logo-card__mark--word" style={{ background: c.color }}>{c.mark}</span>
               <div>
                 <div className="lp-logo-card__name">{c.name}</div>
                 <div className="lp-logo-card__sub">{c.sub}</div>
