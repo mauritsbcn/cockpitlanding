@@ -17,22 +17,26 @@ export default function Hero() {
     <header id="top" className="lp-hero">
       <div className="lp-wrap lp-hero__grid">
         <div className="lp-hero__copy">
-          <span className="lp-eyebrow">Multi-marketplace dashboard</span>
-          <h1 className="lp-h1">De cockpit voor je marketplace business.</h1>
-          <p className="lp-h1-sub">Cijfers die kloppen. Elke dag opnieuw.</p>
+          <span className="lp-eyebrow">Marge-inzicht voor marketplace-sellers</span>
+          <h1 className="lp-h1">
+            Grip op je <span style={{ color: "var(--cp-success)" }}>marge</span>.
+            <br />Over al je marketplaces.
+          </h1>
+          <p className="lp-h1-sub">Zie elke dag wat je wérkelijk overhoudt — tot op de cent.</p>
           <p className="lp-lead">
-            Bol, Amazon, Praxis en Shopify in één overzicht. Verkoop, ad spend, verzendkosten
-            en retouren per kanaal — elke ochtend zie je wat er vandaag gebeurt.
+            Bol, Amazon, Praxis en Shopify in één overzicht. Omzet, commissies, ad spend,
+            verzendkosten en retouren per kanaal — gevalideerd tegen de marketplace-factuur,
+            elke ochtend vers.
           </p>
           <div className="lp-hero__cta">
             <a href={TRIAL_MAILTO} className="lp-btn lp-btn--primary">
               Start gratis trial
               <ArrowRight size={16} />
             </a>
-            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">Plan gratis introductie-call</a>
+            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">Plan gratis setup-call</a>
           </div>
           <p style={{ fontSize: 13, color: "var(--cp-text-muted)", marginTop: 14, marginBottom: 0 }}>
-            30 dagen gratis · geen creditcard · of{" "}
+            30 dagen gratis · geen creditcard · gratis setup in één call · of{" "}
             <Link href="/dashboard" style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>bekijk eerst de demo</Link>
           </p>
 
@@ -110,14 +114,14 @@ function FloatingCallout({
 
 function HeroDashboardMock() {
   return (
-    <div className="lp-mock" role="img" aria-label="Cockpit dashboard preview">
+    <div className="lp-mock" role="img" aria-label="MarginGrip dashboard preview">
       <div className="lp-mock__chrome">
         <span className="lp-mock__dot" style={{ background: "#FF6058" }} />
         <span className="lp-mock__dot" style={{ background: "#FFBD2E" }} />
         <span className="lp-mock__dot" style={{ background: "#28C941" }} />
         <span className="lp-mock__url">
           <LockIcon size={9} color="#16A34A" />
-          app.cockpit.nl/overzicht
+          app.margingrip.nl/overzicht
         </span>
       </div>
       <div className="lp-mock__body">
@@ -162,7 +166,7 @@ function MockSidebar() {
     <div className="lp-mock-side">
       <div className="lp-mock-side__brand">
         <span className="lp-mock-side__mark" />
-        Cockpit
+        MarginGrip
       </div>
       <div className="lp-mock-side__nav">
         {items.map((it) => (

@@ -81,7 +81,7 @@ export default function Pricing() {
           <p className="lp-lead">
             Start met 30 dagen gratis en een introductie-call van een uur:
             wat is je doel, wat verkoop je en waar verkoop je op. Daarna
-            weet je precies wat Cockpit je oplevert.
+            weet je precies wat MarginGrip je oplevert.
           </p>
         </div>
         <div className="lp-pricing-grid">

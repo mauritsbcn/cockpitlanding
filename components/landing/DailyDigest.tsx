@@ -23,7 +23,7 @@ export default function DailyDigest() {
           <span className="lp-eyebrow">Dagelijks overzicht</span>
           <h2 className="lp-h2">Dit gebeurt er vandaag in je business</h2>
           <p className="lp-lead">
-            Geen portalen afstruinen. Cockpit vat elke dag samen wat er is gebeurd —
+            Geen portalen afstruinen. MarginGrip vat elke dag samen wat er is gebeurd —
             verkoop, kosten en retouren, over al je kanalen tegelijk.
           </p>
         </div>

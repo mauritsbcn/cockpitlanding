@@ -8,7 +8,7 @@ export default function OperatorProof() {
             <blockquote className="lp-testimonial__quote">
               We runnen zelf <strong>Hocus Picus</strong> en <strong>meubelshop.nl</strong> —
               twee merken die verkopen op Bol, Amazon, Praxis en Shopify.
-              Cockpit is wat we voor onszelf bouwden, omdat geen enkele bestaande tool ons
+              MarginGrip is wat we voor onszelf bouwden, omdat geen enkele bestaande tool ons
               écht inzicht gaf in onze marges. Elke feature die je hier ziet, gebruiken we
               dagelijks zelf.
             </blockquote>
@@ -20,7 +20,7 @@ export default function OperatorProof() {
               </div>
             </div>
             <div className="lp-testimonial__divider" />
-            <span className="lp-testimonial__brands-label">Eigen merken die op Cockpit draaien</span>
+            <span className="lp-testimonial__brands-label">Eigen merken die op MarginGrip draaien</span>
             <div className="lp-testimonial__brand-row">
               <div className="lp-brand-card">
                 <div className="lp-brand-card__logo" style={{ background: "#0B2545" }}>HP</div>
@@ -40,7 +40,7 @@ export default function OperatorProof() {
                 <div className="lp-brand-card__logo" style={{ background: "#1B3E6F" }}>MG</div>
                 <div className="lp-brand-card__meta">
                   <div className="lp-brand-card__name">Maurits Group</div>
-                  <div className="lp-brand-card__sub">Holding · brengt Cockpit naar buiten</div>
+                  <div className="lp-brand-card__sub">Holding · brengt MarginGrip naar buiten</div>
                 </div>
               </div>
             </div>

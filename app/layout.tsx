@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cockpit — De cockpit voor je marketplace business",
-  description: "Multi-marketplace dashboard voor NL/BE e-commerce sellers. Bol, Amazon, Praxis en Shopify in één overzicht. Werkelijke marges, niet alleen omzet.",
+  title: "MarginGrip — Grip op je marge, over al je marketplaces",
+  description: "Zie elke dag wat je wérkelijk overhoudt op Bol, Amazon, Praxis en Shopify — tot op de cent, gevalideerd tegen de marketplace-factuur. Zelf doen, met begeleiding of volledig uitbesteed.",
 };
 
 export default function RootLayout({

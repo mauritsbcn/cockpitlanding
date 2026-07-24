@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <Link className="lp-nav__brand" href="/" style={{ fontSize: 19 }}>
               <span className="lp-nav__brand-mark" />
-              Cockpit
+              MarginGrip
             </Link>
             <p className="lp-footer__brand-blurb">
               Multi-marketplace dashboard voor Nederlandse en Belgische e-commerce sellers.

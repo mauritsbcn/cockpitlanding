@@ -2,8 +2,8 @@ export default function HowItWorks() {
   const steps = [
     {
       n: 1,
-      title: "Gratis introductie-call",
-      body: "Een uur, kosteloos. Drie vragen staan centraal: wat is je doel, wat verkoop je en waar verkoop je op. Daaruit volgt je roadmap.",
+      title: "Gratis setup-call",
+      body: "Eén uur, kosteloos. We koppelen sámen je marketplaces, zetten je kostprijzen klaar en lopen door je eerste cijfers. Je verlaat de call met een werkend dashboard.",
     },
     {
       n: 2,
@@ -13,7 +13,7 @@ export default function HowItWorks() {
     {
       n: 3,
       title: "Sync start automatisch",
-      body: "Cockpit haalt je laatste 90 dagen op, normaliseert valuta en BTW, en koppelt orders aan campagnes. Klaar binnen minuten.",
+      body: "MarginGrip haalt je laatste 90 dagen op, normaliseert valuta en BTW, en koppelt orders aan campagnes. Klaar binnen minuten.",
     },
     {
       n: 4,
@@ -29,7 +29,7 @@ export default function HowItWorks() {
           <span className="lp-eyebrow">Hoe werkt het</span>
           <h2 className="lp-h2">Live in vijf minuten. Geen IT.</h2>
           <p className="lp-lead">
-            Vier stappen, één keer. Daarna draait Cockpit op de achtergrond en zie je
+            Vier stappen, één keer. Daarna draait MarginGrip op de achtergrond en zie je
             elke ochtend een vers beeld van je hele operatie.
           </p>
         </div>

@@ -8,6 +8,7 @@ import Integrations from "@/components/landing/Integrations";
 import Payback from "@/components/landing/Payback";
 import OperatorProof from "@/components/landing/OperatorProof";
 import HowItWorks from "@/components/landing/HowItWorks";
+import ServiceModels from "@/components/landing/ServiceModels";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import CTABlock from "@/components/landing/CTABlock";
@@ -27,6 +28,7 @@ export default function LandingPage() {
         <Payback />
         <OperatorProof />
         <HowItWorks />
+        <ServiceModels />
         <Pricing />
         <FAQ />
         <CTABlock />

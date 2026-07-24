@@ -21,7 +21,7 @@ const items = [
   },
   {
     q: "Ik verstuur (deels) zelf. Werkt dat ook?",
-    a: "Ja. Voor zelf verstuurde orders (FBM) staat een download-template klaar met vaste kolommen en één voorbeeldproduct. Vul je verzend- en pick & pack-kosten in, upload het bestand, en Cockpit rekent ze per order mee — naast je FBA/LVB-orders.",
+    a: "Ja. Voor zelf verstuurde orders (FBM) staat een download-template klaar met vaste kolommen en één voorbeeldproduct. Vul je verzend- en pick & pack-kosten in, upload het bestand, en MarginGrip rekent ze per order mee — naast je FBA/LVB-orders.",
   },
   {
     q: "Hoe vaak wordt het overzicht bijgewerkt?",

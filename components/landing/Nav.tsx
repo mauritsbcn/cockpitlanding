@@ -19,7 +19,7 @@ export default function Nav() {
       <div className="lp-wrap lp-nav__inner">
         <Link className="lp-nav__brand" href="/">
           <span className="lp-nav__brand-mark" />
-          Cockpit
+          MarginGrip
         </Link>
 
         <div className="lp-nav__links">

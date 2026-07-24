@@ -24,7 +24,7 @@ export default function CostBreakdown() {
           <h2 className="lp-h2">Elke kostenregel zichtbaar. Cijfers die kloppen.</h2>
           <p className="lp-lead">
             Commissies, ad spend, verzendkosten, pick &amp; pack, retouren en je eigen
-            extra kostenregels — Cockpit trekt alles af tot wat je werkelijk overhoudt.
+            extra kostenregels — MarginGrip trekt alles af tot wat je werkelijk overhoudt.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function CostBreakdown() {
             <span className="lp-eyebrow">FBA én zelf verstuurd</span>
             <h3>Fulfilment door de marketplace of zelf versturen? Zie het verschil.</h3>
             <p>
-              Verstuur je via FBA/LVB, zelf (FBM), of allebei? Cockpit rekent per order
+              Verstuur je via FBA/LVB, zelf (FBM), of allebei? MarginGrip rekent per order
               de juiste kosten toe, zodat je per product ziet welke route het meest
               overhoudt. Voor zelf verstuurde orders staat een download-template klaar
               met vaste kolommen en één voorbeeldproduct — invullen, uploaden, klaar.

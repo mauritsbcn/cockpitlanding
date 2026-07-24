@@ -9,14 +9,14 @@ export const APP_LOGIN_URL = `${APP_URL}/login`;
 export const CONTACT_EMAIL = "info@mauritsgroup.com";
 
 export const CONTACT_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Intake")}`;
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Intake")}`;
 export const PRIVACY_MAILTO = `mailto:${CONTACT_EMAIL}`;
 
 export const MEUBELSHOP_URL = "https://meubelshop.nl";
 
 export const TRIAL_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Gratis trial starten")}`;
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Gratis trial starten")}`;
 export const INTRO_CALL_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Gratis introductie-call (1 uur)")}`;
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Gratis setup-call (1 uur)")}`;
 export const AGENCY_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Cockpit · Agency / white label")}`;
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Agency / white label")}`;
