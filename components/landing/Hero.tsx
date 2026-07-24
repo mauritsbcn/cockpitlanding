@@ -56,15 +56,9 @@ export default function Hero() {
 
         <div className="lp-hero__visual">
           <HeroDashboardMock />
-          {/* Volledig búiten de mockup (boven de linkerhoek) — elke positie
-              op de linkerrand overlapt anders de sidebar-tekst */}
-          <FloatingCallout
-            style={{ top: "-7%", left: "-7%" }}
-            color="#16A34A"
-            label="Netto resultaat"
-            value="€23.040"
-            delta="+18,1%"
-          />
+          {/* Netto resultaat zit als subtiele kaart ín de mock-sidebar
+              (onder Connecties) — een zwevende callout links overlapte
+              altijd wel érgens de sidebar-tekst */}
           <FloatingCallout
             style={{ bottom: "6%", right: "-2%" }}
             color="#3A8FE0"
@@ -182,6 +176,25 @@ function MockSidebar() {
             {it.label}
           </div>
         ))}
+      </div>
+
+      {/* Subtiele resultaat-kaart onder het menu */}
+      <div
+        style={{
+          marginTop: 14,
+          padding: "8px 10px",
+          borderRadius: 8,
+          background: "rgba(255,255,255,0.07)",
+          border: "1px solid rgba(255,255,255,0.10)",
+        }}
+      >
+        <div style={{ fontSize: 8.5, color: "rgba(255,255,255,0.55)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2 }}>
+          Netto resultaat
+        </div>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+          <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", fontVariantNumeric: "tabular-nums" }}>€23.040</span>
+          <span style={{ fontSize: 9.5, fontWeight: 600, color: "#4ADE80" }}>+18,1%</span>
+        </div>
       </div>
     </div>
   );
