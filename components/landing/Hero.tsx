@@ -56,10 +56,10 @@ export default function Hero() {
 
         <div className="lp-hero__visual">
           <HeroDashboardMock />
-          {/* Onder de sidebar-branding houden — "MarginGrip" is langer dan het
-              oude merk en de callout stond er eerst overheen */}
+          {/* Volledig búiten de mockup (boven de linkerhoek) — elke positie
+              op de linkerrand overlapt anders de sidebar-tekst */}
           <FloatingCallout
-            style={{ top: "30%", left: "-12%" }}
+            style={{ top: "-7%", left: "-7%" }}
             color="#16A34A"
             label="Netto resultaat"
             value="€23.040"
