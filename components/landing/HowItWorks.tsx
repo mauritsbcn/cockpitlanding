@@ -2,7 +2,7 @@ export default function HowItWorks() {
   const steps = [
     {
       n: 1,
-      title: "Gratis setup-call",
+      title: "Gratis setup-call (t.w.v. €300)",
       body: "Eén uur, kosteloos. We koppelen sámen je marketplaces, zetten je kostprijzen klaar en lopen door je eerste cijfers. Je verlaat de call met een werkend dashboard.",
     },
     {

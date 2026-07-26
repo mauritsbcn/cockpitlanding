@@ -36,7 +36,7 @@ export default function Hero() {
             <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">Plan gratis setup-call</a>
           </div>
           <p style={{ fontSize: 13, color: "var(--cp-text-muted)", marginTop: 14, marginBottom: 0 }}>
-            30 dagen gratis · geen creditcard · gratis setup in één call · of{" "}
+            30 dagen gratis · geen creditcard · gratis setup-call t.w.v. €300 · of{" "}
             <Link href="/dashboard" style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>bekijk eerst de demo</Link>
           </p>
 

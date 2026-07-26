@@ -34,7 +34,7 @@ const plans: Plan[] = [
     caption: "Volledige functionaliteit, geen creditcard nodig. Stopt vanzelf.",
     features: [
       "Alle koppelingen en rapportages",
-      "Gratis introductie-call van 1 uur",
+      "Gratis setup-call van 1 uur (t.w.v. €300)",
       "Je eigen data, live gesynchroniseerd",
       "Geen verplichtingen na afloop",
     ],

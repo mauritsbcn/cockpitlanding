@@ -25,7 +25,7 @@ const MODELS: Model[] = [
     body: "Jij houdt zelf de regie. MarginGrip laat elke dag zien wat je overhoudt — jij stuurt bij waar nodig.",
     points: [
       "Alle koppelingen en rapportages",
-      "Gratis setup in één call van een uur",
+      "Gratis setup in één call van een uur (t.w.v. €300)",
       "Vanaf €49,95 per maand, maandelijks opzegbaar",
     ],
     cta: { label: "Start gratis trial", href: TRIAL_MAILTO },
