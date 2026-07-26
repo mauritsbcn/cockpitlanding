@@ -17,8 +17,8 @@ export default function HowItWorks() {
     },
     {
       n: 4,
-      title: "Elke dag een update",
-      body: "Vanaf dan zie je elke ochtend wat er vandaag gebeurt — verkoop, kosten en retouren. Dagelijks of wekelijks, jij kiest.",
+      title: "Realtime inzicht, elke dag",
+      body: "Vanaf dan heb je op elk moment van de dag realtime inzicht in je e-com business. Plus wekelijks een persoonlijk weekrapport in je inbox — op de dag en tijd die jij kiest — zodat je de week scherp start.",
     },
   ];
 
@@ -29,8 +29,8 @@ export default function HowItWorks() {
           <span className="lp-eyebrow">Hoe werkt het</span>
           <h2 className="lp-h2">Live in vijf minuten. Geen IT.</h2>
           <p className="lp-lead">
-            Vier stappen, één keer. Daarna draait MarginGrip op de achtergrond en zie je
-            elke ochtend een vers beeld van je hele operatie.
+            Vier stappen, één keer. Daarna draait MarginGrip op de achtergrond: realtime
+            inzicht wanneer jij inlogt, en elke week een rapport om de week goed te starten.
           </p>
         </div>
         <div className="lp-steps">
