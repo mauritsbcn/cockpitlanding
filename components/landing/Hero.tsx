@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TRIAL_MAILTO, INTRO_CALL_MAILTO } from "@/lib/site";
+import { TRIAL_MAILTO, INTRO_CALL_MAILTO, PLATFORM_STATS } from "@/lib/site";
 
 const MP_COLORS = {
   bol: "#0066B2",
@@ -52,10 +52,24 @@ export default function Hero() {
             </div>
             <span>Werkt vanaf dag 1 met de marketplaces die je al gebruikt</span>
           </div>
+
+          {/* Social proof + mobiel-compatibiliteit */}
+          <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 13, fontWeight: 600, color: "var(--cp-text-secondary)", background: "var(--cp-surface)", border: "1px solid var(--cp-border)", borderRadius: 999, padding: "6px 14px" }}>
+              {PLATFORM_STATS.orders} bestellingen &middot; {PLATFORM_STATS.revenue} omzet live inzichtelijk
+            </span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "var(--cp-text-secondary)", background: "var(--cp-surface)", border: "1px solid var(--cp-border)", borderRadius: 999, padding: "6px 14px" }}>
+              <AppleIcon size={13} /> iPhone
+              <span style={{ color: "var(--cp-border)" }}>|</span>
+              <AndroidIcon size={13} /> Android
+              <span style={{ color: "var(--cp-text-muted)", fontWeight: 500 }}>&middot; werkt overal, geen installatie</span>
+            </span>
+          </div>
         </div>
 
         <div className="lp-hero__visual">
           <HeroDashboardMock />
+          <HeroPhoneMock />
           {/* Netto resultaat zit als subtiele kaart ín de mock-sidebar
               (onder Connecties) — een zwevende callout links overlapte
               altijd wel érgens de sidebar-tekst */}
@@ -70,6 +84,51 @@ export default function Hero() {
         </div>
       </div>
     </header>
+  );
+}
+
+function HeroPhoneMock() {
+  return (
+    <div
+      aria-hidden
+      style={{
+        position: "absolute", bottom: "-6%", left: "-7%", width: 128,
+        background: "#0B2545", borderRadius: 22, padding: 7,
+        boxShadow: "0 18px 40px rgba(11,37,69,0.28)", transform: "rotate(-4deg)",
+      }}
+    >
+      <div style={{ background: "#fff", borderRadius: 16, overflow: "hidden" }}>
+        <div style={{ background: "var(--cp-navy-900)", padding: "10px 10px 8px" }}>
+          <div style={{ fontSize: 7.5, color: "rgba(255,255,255,0.6)" }}>Vandaag</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: "#fff", marginTop: 1 }}>&euro; 2.140</div>
+          <div style={{ fontSize: 7.5, fontWeight: 700, color: "#4ADE80" }}>+12% &middot; 23 orders</div>
+        </div>
+        <div style={{ padding: 8, display: "flex", alignItems: "flex-end", gap: 2.5, height: 44 }}>
+          {[14, 20, 12, 24, 18, 28, 22, 32, 26, 36].map((h, i) => (
+            <span key={i} style={{ flex: 1, height: h, borderRadius: 2, background: i >= 8 ? "#22C55E" : "var(--cp-blue-500)", opacity: i >= 8 ? 1 : 0.55 }} />
+          ))}
+        </div>
+        <div style={{ padding: "0 8px 9px", fontSize: 7, color: "var(--cp-text-muted)", textAlign: "center" }}>
+          iPhone &amp; Android
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AppleIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" style={{ width: size, height: size, fill: "currentColor" }}>
+      <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.98-.2 1.92-.9 3.16-.81 1.79.14 3.03.86 3.86 2.15-3.27 2.02-2.76 6.29.53 7.61-.63 1.36-1.44 2.7-2.63 3.22ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25Z" />
+    </svg>
+  );
+}
+
+function AndroidIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" style={{ width: size, height: size, fill: "currentColor" }}>
+      <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.7-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.46 11.46 0 00-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.15-.42.54-.26.85L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52ZM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5Zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5Z" />
+    </svg>
   );
 }
 

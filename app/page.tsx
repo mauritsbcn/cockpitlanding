@@ -1,6 +1,7 @@
 import Nav from "@/components/landing/Nav";
 import Hero from "@/components/landing/Hero";
 import TrustStrip from "@/components/landing/TrustStrip";
+import MarketplaceSlider from "@/components/landing/MarketplaceSlider";
 import ProblemSection from "@/components/landing/ProblemSection";
 import DailyDigest from "@/components/landing/DailyDigest";
 import CostBreakdown from "@/components/landing/CostBreakdown";
@@ -21,6 +22,7 @@ export default function LandingPage() {
       <main>
         <Hero />
         <TrustStrip />
+        <MarketplaceSlider />
         <ProblemSection />
         <DailyDigest />
         <CostBreakdown />

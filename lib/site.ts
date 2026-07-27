@@ -20,3 +20,11 @@ export const INTRO_CALL_MAILTO =
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Gratis setup-call (1 uur)")}`;
 export const AGENCY_MAILTO =
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Agency / white label")}`;
+
+// Platform-cijfers voor social proof op de landing.
+// ECHTE cijfers uit de productie-DB — periodiek bijwerken (stand: 27 jul 2026,
+// 2.676 orders / €76.703 omzet incl BTW over live tenants).
+export const PLATFORM_STATS = {
+  orders: "2.500+",
+  revenue: "€75.000+",
+};
