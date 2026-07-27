@@ -56,7 +56,7 @@ export default function Hero() {
           {/* Social proof + mobiel-compatibiliteit */}
           <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
             <span style={{ fontSize: 13, fontWeight: 600, color: "var(--cp-text-secondary)", background: "var(--cp-surface)", border: "1px solid var(--cp-border)", borderRadius: 999, padding: "6px 14px" }}>
-              {PLATFORM_STATS.orders} bestellingen &middot; {PLATFORM_STATS.revenue} omzet live inzichtelijk
+              {PLATFORM_STATS.agencyRevenue} omzet gegenereerd &amp; gemanaged op marketplaces
             </span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "var(--cp-text-secondary)", background: "var(--cp-surface)", border: "1px solid var(--cp-border)", borderRadius: 999, padding: "6px 14px" }}>
               <AppleIcon size={13} /> iPhone
