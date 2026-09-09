@@ -1,4 +1,4 @@
-import { TRIAL_MAILTO, INTRO_CALL_MAILTO } from "@/lib/site";
+import { TRIAL_URL, SETUP_CALL_URL } from "@/lib/site";
 
 function ArrowRight({ size = 16 }: { size?: number }) {
   return (
@@ -20,10 +20,10 @@ export default function CTABlock() {
             met een concrete roadmap.
           </p>
           <div className="lp-cta__buttons">
-            <a href={TRIAL_MAILTO} className="lp-btn lp-btn--on-navy-primary">
+            <a href={TRIAL_URL} className="lp-btn lp-btn--on-navy-primary">
               Start gratis trial <ArrowRight size={16} />
             </a>
-            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--on-navy-ghost">
+            <a href={SETUP_CALL_URL} className="lp-btn lp-btn--on-navy-ghost">
               Plan gratis introductie-call
             </a>
           </div>

@@ -1,4 +1,4 @@
-import { TRIAL_MAILTO, INTRO_CALL_MAILTO, AGENCY_MAILTO } from "@/lib/site";
+import { TRIAL_URL, SETUP_CALL_URL, AGENCY_MAILTO } from "@/lib/site";
 
 /**
  * Drie manieren om MarginGrip te gebruiken: zelf, met begeleiding, of volledig
@@ -28,7 +28,7 @@ const MODELS: Model[] = [
       "Gratis setup in één call van een uur (t.w.v. €300)",
       "Vanaf €49,95 per maand, maandelijks opzegbaar",
     ],
-    cta: { label: "Start gratis trial", href: TRIAL_MAILTO },
+    cta: { label: "Start gratis trial", href: TRIAL_URL },
   },
   {
     badge: "Met begeleiding",
@@ -41,7 +41,7 @@ const MODELS: Model[] = [
       "Periodieke cijfer-review met een specialist",
       "Advies over pricing, kosten en kanaal-keuzes",
     ],
-    cta: { label: "Plan een kennismaking", href: INTRO_CALL_MAILTO },
+    cta: { label: "Plan een kennismaking", href: SETUP_CALL_URL },
   },
   {
     badge: "Volledig uitbesteed",

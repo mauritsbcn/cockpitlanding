@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TRIAL_MAILTO, INTRO_CALL_MAILTO, PLATFORM_STATS } from "@/lib/site";
+import { TRIAL_URL, SETUP_CALL_URL, PLATFORM_STATS } from "@/lib/site";
 
 const MP_COLORS = {
   bol: "#0066B2",
@@ -29,11 +29,11 @@ export default function Hero() {
             elke ochtend vers.
           </p>
           <div className="lp-hero__cta">
-            <a href={TRIAL_MAILTO} className="lp-btn lp-btn--primary">
+            <a href={TRIAL_URL} className="lp-btn lp-btn--primary">
               Start gratis trial
               <ArrowRight size={16} />
             </a>
-            <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">Plan gratis setup-call</a>
+            <a href={SETUP_CALL_URL} className="lp-btn lp-btn--ghost">Plan gratis setup-call</a>
           </div>
           <p style={{ fontSize: 13, color: "var(--cp-text-muted)", marginTop: 14, marginBottom: 0 }}>
             30 dagen gratis · geen creditcard · gratis setup-call t.w.v. €300 · of{" "}

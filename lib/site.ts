@@ -2,9 +2,14 @@
 // Override via env vars in Railway (NEXT_PUBLIC_APP_URL).
 
 export const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://app.cockpit.mauritsgroup.com";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://cockpit.mauritsgroup.com";
 
 export const APP_LOGIN_URL = `${APP_URL}/login`;
+
+// Aanmeldflow (call-first): beide CTA's gaan naar het aanvraagformulier in de app;
+// na versturen kan de lead direct de setup-call boeken (Cal.com).
+export const TRIAL_URL = `${APP_URL}/aanmelden`;
+export const SETUP_CALL_URL = `${APP_URL}/aanmelden`;
 
 export const CONTACT_EMAIL = "info@mauritsgroup.com";
 
@@ -14,10 +19,6 @@ export const PRIVACY_MAILTO = `mailto:${CONTACT_EMAIL}`;
 
 export const MEUBELSHOP_URL = "https://meubelshop.nl";
 
-export const TRIAL_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Gratis trial starten")}`;
-export const INTRO_CALL_MAILTO =
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Gratis setup-call (1 uur)")}`;
 export const AGENCY_MAILTO =
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("MarginGrip · Agency / white label")}`;
 

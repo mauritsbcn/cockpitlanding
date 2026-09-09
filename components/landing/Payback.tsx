@@ -1,4 +1,4 @@
-import { INTRO_CALL_MAILTO } from "@/lib/site";
+import { SETUP_CALL_URL } from "@/lib/site";
 
 function ArrowRight({ size = 16 }: { size?: number }) {
   return (
@@ -39,7 +39,7 @@ export default function Payback() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 36 }}>
-          <a href={INTRO_CALL_MAILTO} className="lp-btn lp-btn--ghost">
+          <a href={SETUP_CALL_URL} className="lp-btn lp-btn--ghost">
             Reken het na in een gratis introductie-call <ArrowRight size={16} />
           </a>
         </div>

@@ -1,4 +1,4 @@
-import { TRIAL_MAILTO, AGENCY_MAILTO, INTRO_CALL_MAILTO } from "@/lib/site";
+import { TRIAL_URL, AGENCY_MAILTO, SETUP_CALL_URL } from "@/lib/site";
 
 function CheckSmIcon() {
   return (
@@ -38,7 +38,7 @@ const plans: Plan[] = [
       "Je eigen data, live gesynchroniseerd",
       "Geen verplichtingen na afloop",
     ],
-    cta: { label: "Start gratis trial", href: TRIAL_MAILTO, primary: false },
+    cta: { label: "Start gratis trial", href: TRIAL_URL, primary: false },
   },
   {
     name: "Compleet",
@@ -53,7 +53,7 @@ const plans: Plan[] = [
       "Extra gebruiker €9,95 p/mnd",
       "E-mail support binnen 24u",
     ],
-    cta: { label: "Start gratis trial", href: TRIAL_MAILTO, primary: true },
+    cta: { label: "Start gratis trial", href: TRIAL_URL, primary: true },
     featured: true,
   },
   {
@@ -116,7 +116,7 @@ export default function Pricing() {
         </div>
         <p style={{ fontSize: 13, color: "var(--cp-text-muted)", marginTop: 24, marginBottom: 0, textAlign: "center" }}>
           Liever eerst kennismaken?{" "}
-          <a href={INTRO_CALL_MAILTO} style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>
+          <a href={SETUP_CALL_URL} style={{ color: "var(--cp-blue-500)", fontWeight: 600 }}>
             Plan de gratis introductie-call van 1 uur
           </a>
           {" "}— we kijken samen naar je doel, je producten en je kanalen.
