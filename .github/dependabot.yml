@@ -1,0 +1,30 @@
+# Maandelijkse update-voorstellen: Dependabot draait op de 1e van de maand,
+# zodat alles klaarligt voor de onderhoudsdag (eerste dinsdag van de maand).
+# Dependabot opent pull requests; er gaat NIETS vanzelf live. Kleine updates
+# komen gebundeld in een voorstel, grote versiesprongen apart zodat ze bewust
+# getest worden. Beveiligingsupdates komen los en direct (GitHub-instelling).
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    open-pull-requests-limit: 5
+    groups:
+      kleine-updates:
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: "Onderhoud"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    groups:
+      acties:
+        patterns: ["*"]
+    commit-message:
+      prefix: "Onderhoud"
